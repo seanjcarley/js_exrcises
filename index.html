@@ -22,7 +22,7 @@
                 let result = 0;
                 let num = 0;
                 while (num < c.length){
-                    if (a % c[num] === 0 || b % c[num] === 0){
+                    if (c[num] % a === 0 || c[num] % b === 0){
                         result += c[num];
                     }
                     num += 1;
