@@ -1,7 +1,8 @@
 <html>
     <head>
-        <!-- <script>
-            function getSum(a, b, n) {
+        <script>
+			function getSum(a, b, n) {
+                // alert("GetSum Called")
                 let result = 0;
                 let num = 0;
                 while (num < n) {
@@ -12,12 +13,20 @@
                 }
                 return result;
             }
+			
+			function f3(){
+                // alert('F3 Called!')
+				let a = document.getElementById('int-a-3').value;
+                let b = document.getElementById('int-b-3').value;
+                let n = document.getElementById('int-n-3').value;
 
-            alert(getSum(3, 5, 10));
-        </script> -->
+                let result = getSum(a, b, n);
+                alert(result)
+                document.getElementById('output-3').innerHTML = result;
+			}
 
-        <!-- Q4 -->
-         <script>
+            // alert(getSum(3, 5, 10));
+			
             function f4(a, b, c){
                 let result = 0;
                 let num = 0;
@@ -29,7 +38,16 @@
                 }
                 return result
             }
-            alert(f4(3, 5, [15, 17, 35, 42]));
+            // alert(f4(3, 5, [15, 17, 35, 42]));
+
+            function f41(){
+                let a = document.getElementById('int-a').value;
+                let b = document.getElementById('int-b').value;
+                let list_c = document.getElementById('list-c').value;
+                alert(list_c)
+				
+                // f4(a, b, c)
+            }
 
             function f5(a, l){
                 let result = 0;
@@ -43,7 +61,7 @@
                 });
                 return result;
             }
-            alert(f5([3, 5], [1, 10, 17, 25, 31, 60]));
+            // alert(f5([3, 5], [1, 10, 17, 25, 31, 60]));
 
             function f6(a, l){
                 let result = 0;
@@ -57,7 +75,35 @@
                 });
                 return result;
             }
-            alert(f6([3, 5, 6], [1, 10, 17, 25, 31, 60]));
-         </script>
+            // alert(f6([3, 5, 6], [1, 10, 17, 25, 31, 60]));
+        </script>
     </head>
+    <body>
+        <section id="question3">
+			<h2>Exercise 3</h2>
+            <form>
+                <label for="int-a">Enter Number for a:</label><br>
+                <input type="text" id="int-a-3" name="int-a"><br>
+                <label for="int-b">Enter Number for b:</label><br>
+                <input type="text" id="int-b-3" name="int-b"><br>
+                <label for="list-c">Enter Number for n:</label><br>
+                <input type="text" id="int-n-3" name="list-c"><br>
+            </form>
+            <button onclick="f3()">Click Me</button>
+			<p id="output-3">placeholder</p>
+        </section>
+        <section id="question41">
+			<h2>Exercise 4.1</h2>
+            <form>
+                <label for="int-a">Enter Number for a:</label><br>
+                <input type="text" id="int-a" name="int-a"><br>
+                <label for="int-b">Enter Number for b:</label><br>
+                <input type="text" id="int-b" name="int-b"><br>
+                <label for="list-c">Enter List of Numbers c:</label><br>
+                <input type="text" id="list-c" name="list-c"><br>
+            </form>
+            <button onclick="f41()">Click Me</button>
+			<p id="output-4"></p>
+        </section>
+    </body>
 </html>
