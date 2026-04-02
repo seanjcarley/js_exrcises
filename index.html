@@ -29,7 +29,21 @@
                 }
                 return result
             }
-            alert(f4(3, 5, [15, 17, 35, 42]))
+            alert(f4(3, 5, [15, 17, 35, 42]));
+
+            function f5(a, l){
+                let result = 0;
+                let num = 0;
+                a.forEach(element_a => {
+                    l.forEach(element_l =>{
+                        if (element_l % element_a === 0){
+                            result += element_l;
+                        }
+                    });
+                });
+                return result;
+            }
+            alert(f5([3, 5], [1, 10, 17, 25, 31, 60]));
          </script>
     </head>
 </html>
