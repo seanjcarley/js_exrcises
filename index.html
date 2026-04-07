@@ -21,7 +21,7 @@
                 let n = document.getElementById('int-n-3').value;
 
                 let result = getSum(a, b, n);
-                alert(result)
+                // alert(result)
                 document.getElementById('output-3').innerHTML = result;
 			}
 
@@ -43,10 +43,12 @@
             function f41(){
                 let a = document.getElementById('int-a').value;
                 let b = document.getElementById('int-b').value;
-                let list_c = document.getElementById('list-c').value;
-                alert(list_c)
+                let list_c = document.getElementById('list-c').value.split(" ").map(x=> parseInt(x.trim()));
+                // alert(list_c)
 				
-                // f4(a, b, c)
+                let result = f4(a, b, list_c)
+                alert(result)
+                document.getElementById('output-4').innerHTML = result;
             }
 
             function f5(a, l){
@@ -63,6 +65,13 @@
             }
             // alert(f5([3, 5], [1, 10, 17, 25, 31, 60]));
 
+            function f51(){
+                let a = document.getElementById('list-a-5').value.split(" ").map(x=> parseInt(x.trim()));
+                let l = document.getElementById('list-l-5').value.split(" ").map(x=> parseInt(x.trim()));
+                let result = f5(a, l);
+                document.getElementById('output-5').innerHTML = result;
+            }
+
             function f6(a, l){
                 let result = 0;
                 let num = 0;
@@ -76,11 +85,19 @@
                 return result;
             }
             // alert(f6([3, 5, 6], [1, 10, 17, 25, 31, 60]));
+
+            function f61(){
+                let a = document.getElementById('list-a-6').value.split(" ").map(x=> parseInt(x.trim()));
+                let l = document.getElementById('list-l-6').value.split(" ").map(x=> parseInt(x.trim()));
+                let result = f5(a, l);
+                document.getElementById('output-6').innerHTML = result;
+            }
         </script>
     </head>
     <body>
-        <section id="question3">
+		<section id="question3">
 			<h2>Exercise 3</h2>
+            <p>Create a function to return the sum of all the multiples of a or b below n.</p>
             <form>
                 <label for="int-a">Enter Number for a:</label><br>
                 <input type="text" id="int-a-3" name="int-a"><br>
@@ -90,20 +107,46 @@
                 <input type="text" id="int-n-3" name="list-c"><br>
             </form>
             <button onclick="f3()">Click Me</button>
+			
 			<p id="output-3">placeholder</p>
         </section>
         <section id="question41">
 			<h2>Exercise 4.1</h2>
+            <p>Create a function to return the sum of all the multiples of a or b in array l</p>
             <form>
-                <label for="int-a">Enter Number for a:</label><br>
-                <input type="text" id="int-a" name="int-a"><br>
-                <label for="int-b">Enter Number for b:</label><br>
-                <input type="text" id="int-b" name="int-b"><br>
-                <label for="list-c">Enter List of Numbers c:</label><br>
-                <input type="text" id="list-c" name="list-c"><br>
+                <label for="int-a-4">Enter Number for a:</label><br>
+                <input type="text" id="int-a-4" name="int-a-4"><br>
+                <label for="int-b-4">Enter Number for b:</label><br>
+                <input type="text" id="int-b-4" name="int-b-4"><br>
+                <label for="list-c-4">Enter List of Numbers c:</label><br>
+                <input type="text" id="list-c-4" name="list-c-4"><br>
             </form>
-            <button onclick="f41()">Click Me</button>
-			<p id="output-4"></p>
+			<button onclick="f41()">Click Me</button>
+			<p id="output-4">placeholder</p>
+        </section>
+        <section id="question51">
+			<h2>Exercise 5.1</h2>
+            <p>reate a function f5 to return the sum of all the multiples of factors in a found in l (a and l should be arrays of integers, a is of length 2)</p>
+            <form>
+                <label for="list-a-5">Enter 2 Numbers for a:</label><br>
+                <input type="text" id="list-a-5" name="list-a-5"><br>
+                <label for="list-l-5">Enter List of Numbers for l:</label><br>
+                <input type="text" id="list-l-5" name="listl-5"><br>
+            </form>
+			<button onclick="f51()">Click Me</button>
+			<p id="output-5">placeholder</p>
+        </section>
+        <section id="question61">
+			<h2>Exercise 6.1</h2>
+            <p>Create a function f6 to return the sum of all the multiples of factors in a found in l (a and l should be arrays of integers)</p>
+            <form>
+                <label for="list-a-6">Enter List of Numbers for a:</label><br>
+                <input type="text" id="list-a-6" name="list-a-6"><br>
+                <label for="list-l-6">Enter List of Numbers for l:</label><br>
+                <input type="text" id="list-l-6" name="listl-6"><br>
+            </form>
+			<button onclick="f61()">Click Me</button>
+			<p id="output-6">placeholder</p>
         </section>
     </body>
 </html>
